@@ -1,0 +1,7 @@
+/* .hola {
+    justify-content: flex-end;
+} */
+
+.sm\:justify-start {
+    justify-content: flex-end;
+}
