@@ -12,3 +12,35 @@
     }
     
 }
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 80%;
+}
+
+button {
+    width: 30%;
+    padding: 12px 5px;
+    background-color: #171050;
+    color: white;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #232ab4;
+}
