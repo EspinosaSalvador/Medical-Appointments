@@ -44,3 +44,31 @@ button:hover {
     background-color: #fff;
     color: #232ab4;
 }
+
+/* ! Changes on Team HTML */
+
+.text-align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    /* background-color: #171050; */
+    margin: 0, 5rem;
+}
+
+/* .biggerSizeIcon {
+    width: 30px;
+    height: 30px;
+}  */
+
+@media screen and (max-width: 600px){
+    #align {
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+        
+    }
+    
+}
