@@ -72,3 +72,33 @@ button:hover {
     }
     
 }
+
+/* ! using css for team */
+
+
+.container {
+    margin-top: 20px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-indigo-600 {
+    color: indigo;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.fa {
+    font-size: 32px;
+    margin-right: 10px;
+    color: gray;
+}
+
+.fa:hover {
+    color: gray;
+}
