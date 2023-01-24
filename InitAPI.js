@@ -274,6 +274,14 @@ function analyze(SessionID) {
   });
 }
 
+InitSession();
+if (diagnosticatedDisease == null){
+  displayDiseasesOutput.innerHTML = '';
+}
+else{
+  displayDiseasesOutput.innerHTML = "You may have:  " + diagnosticatedDisease;
+}
+
 //Second API Search Function
 const options = {
   method: "GET",
@@ -330,5 +338,4 @@ function searchAPI() {
 //Call the search API when the search button is clicked
 searchbutton.addEventListener("click", searchAPI);
 
-InitSession();
-displayDiseasesOutput.innerHTML = "You may have:  " + diagnosticatedDisease;
+

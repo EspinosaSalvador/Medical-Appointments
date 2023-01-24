@@ -1,19 +1,19 @@
 var initPage = document.querySelector(".Accept-Conditions");
-var checkBox = document.querySelector("#checkbox");
+var checkBoxTYC = document.querySelector("#checkboxTYC");
 var submitCheckedBtnValue = document.querySelector("#Checked-Btn-Value");
 
-checkBox.addEventListener("change", () => {
+checkBoxTYC.addEventListener("change", () => {
   event.preventDefault();
-  if (checkBox.value == "true") {
-    checkBox.value = "false";
+  if (checkBoxTYC.value == "true") {
+    checkBoxTYC.value = "false";
   } else {
-    checkBox.value = "true";
+    checkBoxTYC.value = "true";
   }
 });
 
 submitCheckedBtnValue.addEventListener("click", () => {
   event.preventDefault();
-  if (checkBox.value == "true") {
+  if (checkBoxTYC.value == "true") {
     localStorage.setItem("T&C", "true");
     window.location.replace("./Diagnoster.html");
   } else {
