@@ -2,7 +2,7 @@ html {
   margin: 0px;
 }
 
-header {
+/* header {
   background: linear-gradient(60deg, darkblue, gray);
   color: white;
   width: 100%;
@@ -10,7 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 header h2 {
   font-size: 36px;
@@ -21,7 +21,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 60px);
+  height: calc(80vh - 60px);
   /* Subtract the height of the header */
 }
 
@@ -52,7 +52,7 @@ form.Accept-Conditions button:hover {
 
 .sidebar {
   height: 30%;
-  /* 100% Full-height */
+  /* 30% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
   position: fixed;
@@ -132,3 +132,15 @@ button#Checked-Btn-Value {
     padding-top: 15px;
   }}
 
+  #checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 20px;
+
+  }
+
+  .black-bg{
+    border: black;
+  }
