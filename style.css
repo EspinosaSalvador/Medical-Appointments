@@ -51,7 +51,7 @@ form.Accept-Conditions button:hover {
 }
 
 .sidebar {
-  height: 100%;
+  height: 30%;
   /* 100% Full-height */
   width: 0;
   /* 0 width - change this with JavaScript */
@@ -59,10 +59,10 @@ form.Accept-Conditions button:hover {
   /* Stay in place */
   z-index: 1;
   /* Stay on top */
-  top: 60px;
+  top: 64px;
   /* Move down below the header */
   left: 0;
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -131,3 +131,4 @@ button#Checked-Btn-Value {
   .sidebar {
     padding-top: 15px;
   }}
+
