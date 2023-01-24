@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,27 +9,28 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
     <script src="./InitAPI.js" type="module"></script>
 </head>
+
 <body>
     <header>
         <h2>Friendliest Diagnoster</h2>
     </header>
 
     <main>
-          <form class="switch pre-configuration">
+        <form class="switch pre-configuration">
             <input type="checkbox" id="checkbox" value="false" unchecked>
             <span class="slider round"></span>
             <p>Use default/normal values for features not provided
                 <span class="switch-value"></span>
             </p>
 
-            <ul>              
+            <ul>
                 <button class="Add-Features openbtn" onclick=openNav()>Add Symptoms</button>
                 <script>
                     function openNav() {
                         event.preventDefault()
                         document.getElementById("mySidebar").style.width = "60%";
                     }
-    
+
                     function closeNav() {
                         event.preventDefault()
                         document.getElementById("mySidebar").style.width = "0";
@@ -37,33 +39,25 @@
 
                 <button class="analyzeProcessBTN">ANALYZE</button>
             </ul>
-          </form>
+        </form>
 
-          <section>
+        <section>
             <ul class="user-features">
                 <p class="DefaultText-userFeaturesCard">Add some features</p>
             </ul>
-          </section>
+        </section>
 
-          <section id="mySidebar" class="sidebar AvailableFeatures">
+        <section id="mySidebar" class="sidebar AvailableFeatures">
             <a class="closebtn" onclick="closeNav()">&times;</a>
-          </section>
+        </section>
 
-          <section>
+        <section>
             <h3 class="displayDisease"></h3>
-          </section>
-          
-          <div class="input-group flex-nowrap" id="searchdisease">
-            <span class="input-Disease-text">Search Item : </span>
-            <input type="text" class="form-control" placeholder="Search for Disease">
-        </div>
-        <div id="buttonlist" >
-            <p><button type="button" id='SubmitButton' class="button btn-primary btn">Search</button></p>  
-        </div>
-          <div id="URL">
-         </div>
+        </section>
+
+
 
     </main>
-    <script src="searchAPI.js"></script>
 </body>
+
 </html>
