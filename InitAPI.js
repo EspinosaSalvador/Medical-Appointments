@@ -1,3 +1,4 @@
+//First API Variables
 var checkBox = document.querySelector('#checkbox');
 var btnAddSymptom = document.querySelector('.Add-Features');
 var availableFeatures = document.querySelector('.AvailableFeatures')
@@ -8,6 +9,11 @@ var analyzeBtn = document.querySelector('.analyzeProcessBTN');
 var displayDiseasesOutput = document.querySelector('.displayDisease');
 var TermsAndConditions = localStorage.getItem('T&C');
 var diagnosticatedDisease = localStorage.getItem('Disease');
+
+//Second API Variables
+var input = document.querySelector(".form-control");
+var searchbutton = document.querySelector("#SubmitButton");
+var urllist = document.querySelector("#URL");
 
 
 checkBox.addEventListener('change',()=>{
@@ -105,6 +111,7 @@ function displayUserFeatures (objectData, indexFeature, SessionID){
 
 }
 
+//First API Call
 function InitSession(){
     const options = {
         method: 'GET',
@@ -197,6 +204,63 @@ function analyze(SessionID){
 
 
 
+//Second API Search Function
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '26b0a498f5msh74e273f1c1aa05fp19c98djsn09d2bf6637aa',
+		'X-RapidAPI-Host': 'contextualwebsearch-websearch-v1.p.rapidapi.com'
+	}
+};
+
+//Function to obtain the search API, second API
+function searchAPI (){
+
+    fetch('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q='+input.value+'&pageNumber=1&pageSize=10&autoCorrect=true', options)
+	    .then(function(response){
+            return response.json();
+        })
+	    .then(function(data){
+
+            console.log(data);
+
+                //Show values from the API and append them into the HTML Page
+                for (var y=0 ; y<10 ; y++){
+                
+                var searchresults = data.value[y].title 
+                var urllink= data.value[y].url; 
+               
+                var link = document.createElement('a');
+                link.setAttribute('href', data.value[y].url);
+
+                var titleEL = document.createElement("span");
+                titleEL.textContent = data.value[y].url
+
+                link.appendChild(titleEL);
+                
+                var newDiv = document.createElement("div");
+                
+                var searchresultsspan = document.createElement("span");
+
+                searchresultsspan.textContent = searchresults;
+            
+                link.appendChild(searchresultsspan);
+                
+                newDiv.appendChild(searchresultsspan);
+                newDiv.appendChild(link);
+
+                urllist.appendChild(newDiv);
+
+               }
+        })
+	.catch(err => console.error(err));
+
+
+    
+}
+
+//Call the search API when the search button is clicked
+searchbutton.addEventListener("click", searchAPI)
 
 InitSession();
 displayDiseasesOutput.innerHTML = "You may have:  "+ diagnosticatedDisease;
