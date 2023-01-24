@@ -7,6 +7,7 @@ var defaultTextInUserFeaturesCard = document.querySelector('.DefaultText-userFea
 var analyzeBtn = document.querySelector('.analyzeProcessBTN');
 var displayDiseasesOutput = document.querySelector('.displayDisease');
 var TermsAndConditions = localStorage.getItem('T&C');
+var diagnosticatedDisease = localStorage.getItem('Disease');
 
 
 checkBox.addEventListener('change',()=>{
@@ -184,10 +185,11 @@ function analyze(SessionID){
             fetch('https://api.endlessmedical.com/v1/dx/Analyze?SessionID='+SessionID+'&NumberOfResults=1', options)
                 .then(response => response.json())
                 .then((data)=>{
-                    var diagnosticatedDisease = Object.keys(data.Diseases[0]).toLocaleString();
-                    var probabilityDisease = Object.values(data.Diseases[0]).toLocaleString()*100;
-                    // diagnosticatedDisease es la variable que devuelve el diagnostico de la api utilizada. 
-                    displayDiseasesOutput.innerHTML = "You may have:  "+ diagnosticatedDisease;
+                    var setLocalStorageDisease = Object.keys(data.Diseases[0]).toLocaleString(); //change
+                    localStorage.setItem('Disease',setLocalStorageDisease); //change
+                    // diagnosticatedDisease es la variable que devuelve el diagnostico de la api utilizada.
+                    diagnosticatedDisease = localStorage.getItem('Disease'); // change
+                    displayDiseasesOutput.innerHTML = "You may have:  "+ diagnosticatedDisease; // change
                 })
                 .catch(err => console.error(err));
     });
@@ -197,7 +199,7 @@ function analyze(SessionID){
 
 
 InitSession();
-
+displayDiseasesOutput.innerHTML = "You may have:  "+ diagnosticatedDisease;
 
 
 
