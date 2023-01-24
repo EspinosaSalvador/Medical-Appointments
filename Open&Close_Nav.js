@@ -7,3 +7,5 @@ export function closeNav() {
     event.preventDefault()
     document.getElementById("mySidebar").style.width = "0";
 }
+
+// testing
