@@ -224,7 +224,7 @@ function updateFeature(SessionID, name, value) {
     .then((response) => response.json())
     .then((response) => console.log(response))
     .catch((err) => console.error(err));
-}
+}git 
 
 function setUseDefaultValues(SessionID) {
   const options = {
