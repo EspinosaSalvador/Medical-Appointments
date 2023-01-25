@@ -45,13 +45,6 @@
                             <a href="./assets/HTML/team.html"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 target="_blank">Team</a>
-
-                            <!-- <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a> -->
-
-                            <a href="./assets/HTML/Calendar.html"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                target="_blank">Calendar</a>
                         </div>
                     </div>
                 </div>
@@ -203,15 +196,13 @@
                 <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
                     <div class="flex flex-shrink-0 items-center px-4">
                         <!-- ! the picture will be changed in later stages of the proyect this one is for now -->
-                        <img class="h-8 w-auto"
-                            src="https://images.squarespace-cdn.com/content/v1/5b8424eb1137a67b0a8c93cd/1565430505646-0PP92HEL77V31JQWCAIZ/public.jpeg?format=1000w"
-                            alt="Your Company">
+                        <img class="h-10 w-auto" src="./assets/Img/snake.png" alt="Your Company">
                     </div>
                     <nav class="mt-5 flex-1 space-y-1 px-2">
                         <!-- ! this is the search bar. -->
                         <form>
                             <input type="text" id="searchInput" placeholder="Search..." class="form-control">
-                            <button type="button" id="SubmitButton" onclick="search() ">Search</button>
+                            <button type="button" id="SubmitButton">Search</button>
                         </form>
 
                         <a href="./index.html"
@@ -228,7 +219,7 @@
                             Heart Disease
                         </a>
 
-                        <a href="./assets/HTML/Calendar.html"
+                        <a href="#"
                             class="text-white hover:bg-indigo-600 hover:bg-opacity-75 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
 
                             Substance Abuse
@@ -270,27 +261,18 @@
                     </div>
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                         <!--! Replace with your content -->
-                        <div class="py-4">
-
-
+                        <div class="py-4" class="content-Dashboard">
                             <div class="h-96 rounded-lg border-4 border-dashed border-gray-200">
-                                <form class="Accept-Conditions">
-                                    <input type="checkbox" id="checkbox" unchecked value='false'>
-                                    <span class="slider round"></span>
-                                    <p>I have read, understood and I accept and agree to comply with the Terms of Use of
-                                        EndlessMedicalAPI
-                                        and Endless Medical services. The Terms of Use are available on
-                                        endlessmedical.com
-                                    </p>
-                                    <button id="Checked-Btn-Value">Submit</button>
-                                </form>
-                                <div class="Add-Features"></div>
-                                <div class="AvailableFeatures"></div>
-                                <div class="user-features"></div>
-                                <div class="DefaultText-userFeaturesCard"></div>
-                                <div class="analyzeProcessBTN"></div>
-                                <div class="displayDisease"></div>
-                                <div id="URL"></div>
+                                <div class="Add-Features box">
+                                </div>
+                                <div class="AvailableFeatures box h-full overflow-y-auto divide-y divide-gray-200">
+
+                                </div>
+                                <div class="user-features box"></div>
+                                <div class="DefaultText-userFeaturesCard box"></div>
+                                <div class="analyzeProcessBTN box"></div>
+                                <div class="displayDisease box"></div>
+                                <div id="URL box"></div>
                             </div>
 
                         </div>
@@ -320,7 +302,7 @@
                 </a>
             </div>
             <div class="mt-8 md:order-1 md:mt-0">
-                <p class="text-center text-l leading-5 text-gray-600">&copy; 2023 Medical Appointment. All rights
+                <p class="text-right text-4 leading-5 text-gray-600">&copy; 2023 Medical Appointment. All rights
                     reserved.
                 </p>
             </div>
@@ -333,7 +315,6 @@
 
 
     <script src="./InitAPI.js"></script>
-    <!-- <script src="./InitAPI.js"></script> -->
     <script src="./Open&Close_Nav.js"></script>
     <script src="./T&C-Check.js"></script>
 </body>
