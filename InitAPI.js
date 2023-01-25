@@ -36,17 +36,10 @@ function displayAddSymptomsCard(SessionID) {
       .then((data) => {
         const symptomNames = data.map((item) => item.text);
         for (var element in symptomNames) {
-          var symptomHtml = `
-            <a class="p-2 block hover:cursor-pointer" href="${element}">
-              <p class="text-sm font-medium text-gray-900">${symptomNames[element]}</p>
-              <p class="text-sm text-gray-500">${element}</p>
-            </a>
-          `;
-
-          // var displayFeature = document.createElement("a");
-          // displayFeature.textContent = symptomNames[element];
-          // displayFeature.setAttribute("class", element);
-          availableFeatures.appendChild("beforeend", symptomHtml);
+          var displayFeature = document.createElement("a");
+          displayFeature.textContent = symptomNames[element];
+          displayFeature.setAttribute("class", element);
+          availableFeatures.appendChild(displayFeature);
 
           displayFeature.addEventListener("click", (element) => {
             document.getElementById("mySidebar").style.width = "0";
