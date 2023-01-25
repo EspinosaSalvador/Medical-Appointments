@@ -4,9 +4,7 @@ var btnAddSymptom = document.querySelector(".Add-Features");
 var availableFeatures = document.querySelector(".AvailableFeatures");
 const symptomsRequest = fetch("./SymptomsOutput.json");
 var selectedUserFeatures = document.querySelector(".user-features");
-var defaultTextInUserFeaturesCard = document.querySelector(
-  ".DefaultText-userFeaturesCard"
-);
+var defaultTextInUserFeaturesCard = document.querySelector(".DefaultText-userFeaturesCard");
 var analyzeBtn = document.querySelector(".analyzeProcessBTN");
 var displayDiseasesOutput = document.querySelector(".displayDisease");
 var TermsAndConditions = localStorage.getItem("T&C");
@@ -15,7 +13,7 @@ var diagnosticatedDisease = localStorage.getItem("Disease");
 //Second API Variables
 var input = document.querySelector(".form-control");
 var searchbutton = document.querySelector("#SubmitButton");
-var urllist = document.querySelector("#URL");
+var urllist = document.querySelector(".py-4")
 
 checkBox.addEventListener("change", () => {
   event.preventDefault();
@@ -299,29 +297,27 @@ function searchAPI() {
 
       //Show values from the API and append them into the HTML Page
       for (var y = 0; y < 10; y++) {
-        var searchresults = data.value[y].title;
-        var urllink = data.value[y].url;
-
-        var link = document.createElement("a");
-        link.setAttribute("href", data.value[y].url);
-
+        var searchresults = data.value[y].title 
+        var urllink= data.value[y].url; 
+       
+        var link = document.createElement('a');
+        link.setAttribute('href', data.value[y].url);
         var titleEL = document.createElement("span");
-        titleEL.textContent = data.value[y].url;
-
+        titleEL.textContent = data.value[y].url
         link.appendChild(titleEL);
-
+        
         var newDiv = document.createElement("div");
-
+        
         var searchresultsspan = document.createElement("span");
-
         searchresultsspan.textContent = searchresults;
-
+    
         link.appendChild(searchresultsspan);
-
+        
         newDiv.appendChild(searchresultsspan);
         newDiv.appendChild(link);
 
         urllist.appendChild(newDiv);
+        
       }
     })
     .catch((err) => console.error(err));
