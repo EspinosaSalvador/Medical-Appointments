@@ -1,26 +1,3 @@
-<p>For the project we worked on consuming 2 third party APIs as well as use Tail Wind to format the page</p> 
-  
-<p>The first API we used is called Diagonster and its an API that provides the user with a probable disease they have by answering a series of symptoms they start recording. The second API that was used was the Search API which is at the end for the user to type in the name of the probable disease they have in order to look for additional by the internet. </p>
- 
-<h2><strong>Programming Logic</strong></h2>
-<p></p>
-
-
-<h2><strong>Screenshots and links</strong></h2>
-<p>How the webpage should look when opening:</p>
-
-<p>When adding a symptom:</p>
-
-<p></p>
-<p>Searching for a second city the history is populated on the left side:</p>
-
-<p></p>
-<p>When selecting a city from the history, the weather is shown again:</p>
-
-<p></p>
-<p>Link to github pages:</p>
-
-
 # Medical Appointment
 
 ## Table of Content
@@ -30,7 +7,9 @@
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Configuration](#configuration)
+* [What you should be able to see](#what-you-should-be-able-to-see)
 * [Troubleshooting](#troubleshooting)
+* [Next Phase Development](#next-phase-development)
 * [FAQ (Frecuently Asked Questions)](#faq-frecuentrly-asked-questions)
 * [Team](#team)
 
@@ -44,6 +23,20 @@ The first API we used is called Diagonster and its an API that provides the user
 
 This are the following feautures of the Medical Appointments
 <!-- ! To be worked on -->
+
+Allows developers to:
+* Obtain a great variety of symptoms that any user could ever have.
+* Select several symptoms that you are currently presenting.
+* According to the selected user’s symptoms, the users can obtain some diseases that they could have, ordered by possibilities of have that specific disease.  
+
+Allows developers to search between:
+* Web Search
+* News Search
+* Image Search
+* Auto Suggest Search
+* Spell Check API
+
+
 
 ## Requirements
 
@@ -96,9 +89,36 @@ git checkout ＜branchname＞
 
 If you want to show us your code and merge please open a pull request on [Github](https://github.com/EspinosaSalvador/Medical-Appointments/pulls).
 
+## What you should be able to see
+
+These is what you should be able to see in the Webpage, 
+![WEbpage](./assets/Img/terms%26conditions.png)
+
+after you click that you should be able to see this page
+
+![Webpage-2](./assets/Img/webpage-2.png)
+
+and also there is a section where you can see our team 
+
+![Team-page](./assets/Img/Team-page.png)
+
+
 ## Troubleshooting
 
 The Code Quiz is in version 1.0 ,please let me know if there are anybug in the webpage by issuing it in [Github](https://github.com/EspinosaSalvador/Medical-Appointments/issues)
+
+## Next Phase Development
+
+* Create refresh button to eliminate local storage
+
+* Provide better format to the symptoms prompted
+
+* Provide better format to search results
+
+* Display all the search results per disease
+
+* Complete and implement login page
+
 
 ## FAQ (Frecuentrly Asked Questions)
 
