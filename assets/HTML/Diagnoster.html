@@ -1,17 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Diagnoster</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../../assets/css/diagnoster.css'>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-
+    <script src="../../assets/js/InitAPI.js" type="module"></script>
 </head>
 
 <body>
+
     <!-- ! Navbar -->
     <nav class="bg-gray-800">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,11 +39,11 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="./index.html"
+                            <a href="./Diagnoster.html"
                                 class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                                 aria-current="page" target="_blank">Dashboard</a>
 
-                            <a href="./assets/HTML/team.html"
+                            <a href="./team.html"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 target="_blank">Team</a>
                         </div>
@@ -59,21 +60,18 @@
         <div class="sm:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pt-2 pb-3">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="./index.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                    aria-current="page">Dashboard</a>
+                <a href="./Diagnoster.html"
+                    class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    aria-current="page">Diagnoster</a>
 
-                <a href="./assets/HTML/team.html"
+                <a href="./team.html"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-                <a href="./assets/HTML/Calendar.html"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
             </div>
         </div>
     </nav>
     <!-- ! End of NAVBAR -->
 
-    <!-- ! Dashboard -->
-
+    <!-- ! Dashboard  -->
 
     <div>
         <div class="relative z-40 md:hidden" role="dialog" aria-modal="true">
@@ -116,7 +114,7 @@
                                 Dashboard
                             </a>
 
-                            <a href="./assets/HTML/team.html"
+                            <a href="./team.html"
                                 class="text-white hover:bg-indigo-600 hover:bg-opacity-75 group flex items-center px-2 py-2 text-base font-medium rounded-md">
                                 <!-- Heroicon name: outline/users -->
                                 <svg class="mr-4 h-6 w-6 flex-shrink-0 text-indigo-300"
@@ -128,16 +126,16 @@
                                 Team
                             </a>
 
-                            <a href="./assets/HTML/Calendar.html"
-                                class="text-white hover:bg-indigo-600 hover:bg-opacity-75 group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                                <!-- Heroicon name: outline/calendar -->
-                                <svg class="mr-4 h-6 w-6 flex-shrink-0 text-indigo-300"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                                </svg>
-                                Calendar
+                            <!-- <a href="./assets/HTML/Calendar.html"
+                                class="text-white hover:bg-indigo-600 hover:bg-opacity-75 group flex items-center px-2 py-2 text-base font-medium rounded-md"> -->
+                            <!-- Heroicon name: outline/calendar -->
+                            <svg class="mr-4 h-6 w-6 flex-shrink-0 text-indigo-300" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            Calendar
                             </a>
 
                             <a href="#"
@@ -196,7 +194,7 @@
                 <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
                     <div class="flex flex-shrink-0 items-center px-4">
                         <!-- ! the picture will be changed in later stages of the proyect this one is for now -->
-                        <img class="h-10 w-auto" src="./assets/Img/snake.png" alt="Your Company">
+                        <img class="h-10 w-auto" src="../../assets/Img/snake.png" alt="Snake">
                     </div>
                     <nav class="mt-5 flex-1 space-y-1 px-2">
                         <!-- ! this is the search bar. -->
@@ -205,7 +203,7 @@
                             <button type="button" id="SubmitButton">Search</button>
                         </form>
 
-                        <a href="./index.html"
+                        <a href="./Diagnoster.html"
                             class="bg-indigo-800 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
 
                             <!-- ! eliminated the icons to make them work as suggestions for the search bar that is above -->
@@ -236,8 +234,6 @@
 
                             Cancer
                         </a>
-
-                        <div class="displayurl-box" style="display: block;"><p>Test!!!!!!!!</p></div>
                     </nav>
                 </div>
 
@@ -266,6 +262,44 @@
                         <div class="py-4" class="content-Dashboard">
                             <div class="h-96 rounded-lg border-4 border-dashed border-gray-200">
                                 <div class="Add-Features box">
+                                    <form class="switch pre-configuration">
+                                        <input type="checkbox" id="checkbox" value="false" unchecked>
+                                        <span class="slider round"></span>
+                                        <p>Use default/normal values for features not provided
+                                            <span class="switch-value"></span>
+                                        </p>
+
+                                        <ul>
+                                            <button class="Add-Features openbtn" onclick=openNav()>Add Symptoms</button>
+                                            <script>
+                                                function openNav() {
+                                                    event.preventDefault()
+                                                    document.getElementById("mySidebar").style.width = "60%";
+                                                }
+
+                                                function closeNav() {
+                                                    event.preventDefault()
+                                                    document.getElementById("mySidebar").style.width = "0";
+                                                }
+                                            </script>
+
+                                            <button class="analyzeProcessBTN">ANALYZE</button>
+                                        </ul>
+                                    </form>
+
+                                    <section>
+                                        <ul class="user-features">
+                                            <p class="DefaultText-userFeaturesCard">Add some features</p>
+                                        </ul>
+                                    </section>
+
+                                    <section id="mySidebar" class="sidebar AvailableFeatures">
+                                        <a class="closebtn" onclick="closeNav()">&times;</a>
+                                    </section>
+
+                                    <section>
+                                        <h3 class="displayDisease"></h3>
+                                    </section>
                                 </div>
                                 <div class="AvailableFeatures box h-full overflow-y-auto divide-y divide-gray-200">
 
@@ -274,7 +308,7 @@
                                 <div class="DefaultText-userFeaturesCard box"></div>
                                 <div class="analyzeProcessBTN box"></div>
                                 <div class="displayDisease box"></div>
-
+                                <div id="URL box"></div>
                             </div>
 
                         </div>
@@ -284,43 +318,76 @@
             </main>
         </div>
     </div>
-
-    <!-- ! End of Dashboard -->
-
+    <!-- ! end of dashboard -->
 
 
-    <!-- ! Start of FOOTER -->
-    <footer class="bg-white">
-        <div class="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
-            <div class="flex justify-center space-x-6 md:order-2">
+    <main>
+        <!-- <form class="switch pre-configuration">
+            <input type="checkbox" id="checkbox" value="false" unchecked>
+            <span class="slider round"></span>
+            <p>Use default/normal values for features not provided
+                <span class="switch-value"></span>
+            </p>
+
+            <ul>
+                <button class="Add-Features openbtn" onclick=openNav()>Add Symptoms</button>
+                <script>
+                    function openNav() {
+                        event.preventDefault()
+                        document.getElementById("mySidebar").style.width = "60%";
+                    }
+
+                    function closeNav() {
+                        event.preventDefault()
+                        document.getElementById("mySidebar").style.width = "0";
+                    }
+                </script>
+
+                <button class="analyzeProcessBTN">ANALYZE</button>
+            </ul>
+        </form>
+
+        <section>
+            <ul class="user-features">
+                <p class="DefaultText-userFeaturesCard">Add some features</p>
+            </ul>
+        </section>
+
+        <section id="mySidebar" class="sidebar AvailableFeatures">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+        </section>
+
+        <section>
+            <h3 class="displayDisease"></h3>
+        </section> -->
+
+        <footer class="bg-white">
+            <div class="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
+                <div class="flex justify-center space-x-6 md:order-2">
 
 
-                <a href="https://github.com/EspinosaSalvador/Medical-Appointments"
-                    class="text-gray-400 hover:text-gray-500" target="_blank">
-                    <span class="sr-only">GitHub</span>
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
+                    <a href="https://github.com/EspinosaSalvador/Medical-Appointments"
+                        class="text-gray-400 hover:text-gray-500" target="_blank">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="mt-8 md:order-1 md:mt-0">
+                    <p class="text-right text-4 leading-5 text-gray-600">&copy; 2023 Medical Appointment. All rights
+                        reserved.
+                    </p>
+                </div>
             </div>
-            <div class="mt-8 md:order-1 md:mt-0">
-                <p class="text-right text-4 leading-5 text-gray-600">&copy; 2023 Medical Appointment. All rights
-                    reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
 
 
-    <!-- ! End of Footer -->
 
-
-    <script src="./InitAPI.js"></script>
-    <script src="./Open&Close_Nav.js"></script>
-    <script src="./T&C-Check.js"></script>
+    </main>
 </body>
 
 </html>
